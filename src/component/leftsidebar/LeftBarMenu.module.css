@@ -1,0 +1,93 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    margin-left: 3.7rem;
+    min-height: 100vh;
+    border: 1px solid red;
+  }
+  
+  .sidebar__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sidebar__item:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+  
+  .sidebar__item i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+  
+  .sidebar__item span {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  
+  .sidebar__tweet button {
+    background-color: #1da1f2;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sidebar__tweet button:hover {
+    background-color: #0c8de4;
+  }
+  
+  .sidebar__profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(29, 161, 242, 0.1);
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .sidebar__profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .sidebar__profileInfo h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .sidebar__profileInfo p {
+    font-size: 1rem;
+    color: gray;
+    margin: 0;
+  }
+  
+  .sidebar__profile i {
+    font-size: 1.2rem;
+    margin-left: auto;
+  }
