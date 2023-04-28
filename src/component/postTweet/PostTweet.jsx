@@ -26,15 +26,11 @@ function PostTweet() {
     setTweetdata({
       ...tweetdata,
       content: value,
+      image:`https://picsum.photos/1000/500?q=${Math.floor(Math.random()*9+1)}`
     });
   };
 
-  const handleImage = (e) => [
-    setTweetdata({
-      ...tweetdata,
-      image: e.target.value,
-    }),
-  ];
+ 
 
   const handleSubmit = (e) => {
     dispatch(TweetSlice.actions.addTweet(tweetdata));
@@ -50,12 +46,7 @@ function PostTweet() {
       <div className={style.tweetBox__input}>
         <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png" />
 
-        <input
-          onChange={handleImage}
-          placeholder="Enter Image Link"
-          type="text"
-          value={tweetdata}
-        />
+      
       </div>
 
       <textarea
