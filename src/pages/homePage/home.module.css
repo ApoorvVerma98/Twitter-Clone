@@ -1,40 +1,29 @@
-
-
-
-
-
 body {
-    --twitter-color: #50b7f5;
-    --twitter-background: #e6ecf0;
-  }
-  
-  .app {
-    display: flex;
-    height: 100vh;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
-  }
-
-  .homeContainer{
-    border: 1px solid red;
-    width: 100%;
-    height: 38rem;
-    display: flex;
-    
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
 }
 
-
-.sidebar{
-    width: 25%;
-    border: 1px solid red;
-    height: 100%;
+.app {
+  display: flex;
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
 }
 
-.mainContainer{
-    width: 50%;
-    border: 1px solid red;
-    
+.homeContainer {
+ 
+  width: 100%;
+  height: 38rem;
+  display: flex;
+}
 
+.sidebar {
+  width: 25%;
+  height: 100%;
+}
+
+.mainContainer {
+  width: 50%;
 }

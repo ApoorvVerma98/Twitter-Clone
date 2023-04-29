@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import styles from "./SearchBar.moduel.css";
+import styles from "./SearchBar.module.css";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -8,6 +8,7 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Perform search action with the query here
     console.log(query);
   };
 

@@ -3,6 +3,7 @@
     width: 100%;
     color: black;
     margin-top: 2.4rem;
+    
   }
   .key {
     background: #f7f9f9;
@@ -36,6 +37,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0.5rem;
+    overflow-y:auto;
+    max-height: 100vh;
   }
   .container:hover {
     background-color: #eff1f1;
