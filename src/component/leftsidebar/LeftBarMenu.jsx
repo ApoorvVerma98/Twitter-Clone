@@ -8,7 +8,6 @@ import { BsBookmark } from "react-icons/bs";
 import { IoPerson } from "react-icons/io5";
 import { CgMoreO } from "react-icons/cg";
 import { BiHomeCircle } from "react-icons/bi";
-// import { Avatar } from "antd";
 import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, DialogActions } from "@mui/material";
 

@@ -1,63 +1,57 @@
-
-.container{
-    border:  1px solid rgb(121, 44, 44);
-    width: 48%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding-left: 7%;
-    
+.container {
+  border: 1px solid rgb(121, 44, 44);
+  width: 48%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 7%;
 }
 
-.emailbtn{
-    color: blue;
-    position: relative;
-    left: 24.3rem;
-    cursor: pointer;
-    width: 116px;
-    margin-top: 10px;
+.emailbtn {
+  color: blue;
+  position: relative;
+  left: 24.3rem;
+  cursor: pointer;
+  width: 116px;
+  margin-top: 10px;
 }
-.emailbtn:hover{
-    border-bottom: 1px solid rgb(89, 145, 185);
-}
-
-.textcontent{
-    
-    font-size: 1.5rem;
-    margin:1rem 0;
+.emailbtn:hover {
+  border-bottom: 1px solid rgb(89, 145, 185);
 }
 
-.para{
-   
-    width: 82%;
-   line-height: 1.5rem;
-   margin-bottom: 1rem;
+.textcontent {
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
-.monthSelector{
-    width: 100%;
+.para {
+  width: 82%;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.selectorDiv{
-    display: flex;
-    width: 81%;
-    justify-content: space-between;
-   
+.monthSelector {
+  width: 100%;
 }
 
-.closeBtn{
-    position: absolute;
-    right: 16rem;
-    top: 0.2rem;
-    font-size: 30px;
-    
+.selectorDiv {
+  display: flex;
+  width: 81%;
+  justify-content: space-between;
 }
 
-.closeIcon{
-    font-size: 40px;
-   
-    background-color: black;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
+.closeBtn {
+  position: absolute;
+  right: 16rem;
+  top: 0.2rem;
+  font-size: 30px;
+}
+
+.closeIcon {
+  font-size: 40px;
+
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
 }

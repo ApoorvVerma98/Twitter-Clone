@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import SignupUpPopup from "./SignupUpPopup";
+
+
 function SignUp() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);

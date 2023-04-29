@@ -1,14 +1,11 @@
 .sidebar {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 0rem 2rem;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-
   width: 17%;
-
-
   overflow-y: auto;
 }
 
@@ -23,9 +20,9 @@
   background-color: rgba(29, 155, 240, 0.1);
 }
 
-  .sidebar__icon{
-    color:#0F1419 ;
-  }
+.sidebar__icon {
+  color: #0f1419;
+}
 
 .sidebar__item {
   display: flex;
@@ -35,11 +32,11 @@
   margin-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-  border: #EFF1F1
+  border: #eff1f1;
 }
 
 .sidebar__item:hover {
-  background-color: #E7E7E8;
+  background-color: #e7e7e8;
 }
 
 .sidebar__item svg {
@@ -49,7 +46,7 @@
 }
 
 .sidebar__item span {
-  color: #0F1419;
+  color: #0f1419;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -91,7 +88,6 @@
   height: 2rem;
 }
 
-
 .sidebar__profile p {
   color: #8899a6;
   font-size: 16px;
@@ -121,69 +117,60 @@
   padding: 0 !important;
 } */
 
-
-
-
-
-.BigPhoto{
+.BigPhoto {
   width: 4rem;
   height: 4rem;
   border-radius: 100%;
   padding: 1rem;
 }
 
-
-.btnT{
-width: 15rem;
-height: 3rem;
-border-radius: 25px;
-background-color:   #00acee;
-border: white;
-color: white;
-font-size: larger;
+.btnT {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 25px;
+  background-color: #00acee;
+  border: white;
+  color: white;
+  font-size: larger;
 }
 
-
-
-.ForTweet{
-width: 30rem;
-padding: 10px;
-overflow-x: hidden;
-height: 10rem;
-border: 2px solid white;
-margin-left: 20px;
-margin-right: 20px;
-outline: none;
-
+.ForTweet {
+  width: 30rem;
+  padding: 10px;
+  overflow-x: hidden;
+  height: 10rem;
+  border: 2px solid white;
+  margin-left: 20px;
+  margin-right: 20px;
+  outline: none;
 }
 
-.imagDiv{
-width: 100%;
-/* border: 1px solid red; */
-display: flex;
-justify-content: space-between;
-align-items: center;
+.imagDiv {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.imagDiv span{
-margin-right: 10px;
-border-radius: 50%;
-
-}
-
-.cross{
-font-size: 25px;
-background-color: black;
-padding: 5px;
-border-radius: 50%;
-color: white;
-font-weight: 900;
-cursor: pointer;
+.imagDiv span {
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
-.TweetBtn{
-background-color: #00acee;
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius:20px;
+.cross {
+  font-size: 25px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.TweetBtn {
+  background-color: #00acee;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
