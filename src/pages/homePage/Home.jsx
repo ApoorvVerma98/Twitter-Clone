@@ -8,14 +8,13 @@ import React from "react";
 const Home = () => {
   return (
     <div className={style.homeContainer}>
-      <div className={style.sidebar}>
+      <div className={style.LeftSideBar}>
           < LeftSideBar />
       </div>
-
-      <div className={style.mainContainer}>
+      <div className={style.TweetContainer}>
         <LiveTweet />
       </div>
-      <div>
+      <div className={style.RightSideBar}>
  < RightSideBar />
       </div>
     </div>

@@ -1,73 +1,49 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import style from "./TrendingBar.module.css";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import Dialog2 from "../../dialogForRigtBar/Dialog2";
-import CustomButton from "./Buttons";
+import { CgMoreO } from "react-icons/cg";
 
 const Trends = () => {
-  const [isNotIntrested, setIsNotIntrested] = useState([
+  const [trending, setTrendings] = useState([
     {
       id: 1,
-      isNotIntrested: false,
       country: "Trending in India",
       keyword: "#Ms Dhoni",
-      totalKeywords: "8000k Tweets",
+      totalKeywords: "7.5M Tweets",
     },
     {
       id: 2,
-      isNotIntrested: false,
-      country: "Trending in India",
-      keyword: "#Virat kohli",
-      totalKeywords: "6000k Tweets",
+      country: "Trending in world",
+      keyword: "#Tom Cruise",
+      totalKeywords: "6.5M Tweets",
     },
     {
       id: 3,
-      isNotIntrested: false,
-      country: "Trending in Sports",
+      country: "Trending in Cricket",
       keyword: "#RohitSharma",
-      totalKeywords: "2560k Tweets",
+      totalKeywords: "5M Tweets",
     },
     {
       id: 4,
-      isNotIntrested: true,
-      country: "Trending in Sports",
+      country: "Trending in Cricket",
       keyword: "#ViratKohli",
-      totalKeywords: "2000k Tweets",
+      totalKeywords: "4.9M Tweets",
     },
     {
       id: 5,
-      isNotIntrested: false,
-      country: "Trending in Sports",
-      keyword: "#sachin",
-      totalKeywords: "2000k Tweets",
+      country: "Trending in Football",
+      keyword: "#Ronaldo",
+      totalKeywords: "3.9M Tweets",
     },
   ]);
+
+  const [showDialog, setShowDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending , setTrendings] = useState(isNotIntrested)
-  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false)
-  const updateId = (id) => setSelectedId(id);
-  const[data,setData]=useState([...trending])
-  const HandleClick = () => {
-    const tempArr = [];
-    trending.forEach((el) => {
-      if (el.id !== selectedId) {
-        tempArr.push(el);
-      }
-    });
-    setTrendings(tempArr);
-    setData(tempArr)
+
+  const handleNotInterested = (id) => {
+    const updatedTrending = trending.filter((keyword) => keyword.id !== id);
+    setTrendings(updatedTrending);
+    setShowDialog(false);
   };
-
-
-
-  function handleRequestSeeAll () {
-    setIsShowingAllTrendings(!isShowingAllTrendings)
-    if(isShowingAllTrendings) {
-       return setTrendings(trending.slice(0,3))
-    }else
-    setTrendings(data)
-}
 
   return (
     <div className={style.keywords}>
@@ -75,52 +51,53 @@ const Trends = () => {
         <div className={style.keyword__heading}>
           <h4 className={style.heading4}>What's happening</h4>
         </div>
-        {trending.map((keyword) => {
-          return (
-            <div
+        {trending.map((keyword) => (
+          <div
             key={keyword.id}
-              className={style.container}
-              onClick={() => {
-                updateId(keyword.id);
-              }}
-            >
-              <div key={keyword.id}>
-                <div className={style.country}>{keyword.country}</div>
-                <div className={style.keyword__name}>
-                  <strong>{keyword.keyword}</strong>
-                </div>
-                <div className={style.keyword__tweets}>
-                  {keyword.totalKeywords}
-                </div>
+            className={style.container}
+            onClick={() => {
+              setSelectedId(keyword.id);
+              setShowDialog(true);
+            }}
+          >
+            <div>
+              <div className={style.country}>{keyword.country}</div>
+              <div className={style.keyword__name}>
+                <strong>{keyword.keyword}</strong>
               </div>
-              <div className={style.btn}>
-              <Dialog2
-                  onClick={HandleClick}
-                  title={
-                    <div>
-                      <SentimentVeryDissatisfiedIcon /> This trend is harmful or
-                      spammy
-                    </div>
-                  }
-                  content={
-                    <p>
-                      <SentimentVeryDissatisfiedIcon />
-                      IsnotIntrested
-                    </p>
-                  }
-                />
+              <div className={style.keyword__tweets}>
+                {keyword.totalKeywords}
               </div>
             </div>
-          );
-        })}
-        <div>
-          <CustomButton
-            customCss={style.btn2}
-            buttonText= {isShowingAllTrendings ? 'Show Less' : 'Show More'} 
-            btnNext={handleRequestSeeAll}
-          />
-        </div>
+            <div className={style.btn}>
+              <CgMoreO size={24} />
+            </div>
+          </div>
+        ))}
       </div>
+      {showDialog && (
+        <div className={style.dialog}>
+          <div className={style.dialog__box}>
+            <div className={style.dialog__header}>
+              <h3 className={style.heading3}>What would you like to do?</h3>
+              <button
+                className={style.close__btn}
+                onClick={() => setShowDialog(false)}
+              >
+                X
+              </button>
+            </div>
+            <div className={style.dialog__body}>
+              <button
+                className={style.not__interested}
+                onClick={() => handleNotInterested(selectedId)}
+              >
+                Not Interested
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

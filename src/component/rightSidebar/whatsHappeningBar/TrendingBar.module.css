@@ -2,6 +2,8 @@
   width: 100%;
   color: black;
   margin-top: 2.4rem;
+  border-left:1px solid #EFF1F1;
+  border-right:1px solid #EFF1F1;
 }
 
 .key {
