@@ -1,11 +1,11 @@
 
 import React from 'react'
-import SidebarMenu from "./LeftBarMenu"
+import LeftBarMenu from "./LeftBarMenu"
 
 const LeftSideBar = () => {
   return (
     <div>
-      <SidebarMenu/>
+      <LeftBarMenu/>
 
       </div>
       )

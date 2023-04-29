@@ -174,3 +174,44 @@
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+  position: static;
+  width: 100%;
+  padding: 1rem;
+  height: auto;
+  overflow-y: visible;
+  }
+  .sidebar__item {
+  margin-bottom: 1rem;
+  }
+  .sidebar__tweet {
+  margin-top: 1rem;
+  }
+  .sidebar__profile {
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  .sidebar__profile img {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  }
+  .imagDiv {
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  .cross {
+  font-size: 20px;
+  padding: 3px;
+  }
+  .ForTweet {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  }
+  .btnT {
+  width: 100%;
+  margin-top: 1rem;
+  }
+  }
