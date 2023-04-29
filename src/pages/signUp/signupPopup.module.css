@@ -44,3 +44,20 @@
     justify-content: space-between;
    
 }
+
+.closeBtn{
+    position: absolute;
+    right: 16rem;
+    top: 0.2rem;
+    font-size: 30px;
+    
+}
+
+.closeIcon{
+    font-size: 40px;
+   
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}

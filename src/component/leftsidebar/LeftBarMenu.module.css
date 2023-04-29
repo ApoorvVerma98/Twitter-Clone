@@ -1,11 +1,11 @@
 .sidebar {
   background-color: #FFFFFF;
-  padding: 10px;
+  padding: 0rem 2rem;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 275px;
+  width: 17rem;
   overflow-y: auto;
 }
 
@@ -16,7 +16,7 @@
 .sidebar__item {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 1rem;
   border-radius: 50px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -30,18 +30,18 @@
 
 .sidebar__item svg {
   font-size: 24px;
-  margin-right: 15px;
+  margin-right: 1rem;
   color: #8899a6;
 }
 
 .sidebar__item span {
   color: #0F1419;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .sidebar__tweet {
-  margin-top: 25px;
+  margin-top: 1.7rem;
 }
 
 .sidebar__tweet button {
@@ -51,7 +51,7 @@
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px;
+  padding: 1rem;
   width: 100%;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -63,22 +63,20 @@
 
 .sidebar__profile {
   display: flex;
-  align-items: center;
+
   margin-top: 25px;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-between;
 }
 
 .sidebar__profile img {
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 1rem;
   width: 50px;
+  height: 2rem;
 }
 
-.sidebar__profile h4 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
 
 .sidebar__profile p {
   color: #8899a6;
@@ -98,7 +96,7 @@
   color: #1da1f2;
 }
 
-.diaglog{
+/* .diaglog{
   width: 400px !important;
   height: 250px;
   background-color: red;
@@ -107,7 +105,7 @@
   top: 5rem !important;
   margin: 0 !important;
   padding: 0 !important;
-}
+} */
 
 
 
@@ -173,5 +171,5 @@ background-color: #00acee;
 color: white;
 border: none;
 padding: 10px 20px;
-border-radius: 20px;
+border-radius:20px;
 }
