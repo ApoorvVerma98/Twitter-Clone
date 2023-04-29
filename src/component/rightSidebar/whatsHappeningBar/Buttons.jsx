@@ -1,12 +1,10 @@
 import React from "react";
 
 
-function CustomButton({ type, buttonText, icon, btnNext, customCss, pitcher, disable }) {
+function CustomButton({  buttonText, btnNext, customCss }) {
   return (
-    <button  disabled={disable}  type={type} className={customCss} onClick={btnNext}>
-      {icon}
+    <button  className={customCss} onClick={btnNext}>
       {buttonText}
-      {pitcher}
     </button>
   );
 }

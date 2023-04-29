@@ -33,7 +33,7 @@ function SignupUpPopup(props) {
   };
 
   console.log(
-    email.length == 0 ||
+    email.length === 0 ||
       phone ||
       emailError ||
       passwordError ||
@@ -232,7 +232,7 @@ function SignupUpPopup(props) {
       </p>
 
       <Button
-        disabled={email.length == 0 || !phone || !password || !date}
+        disabled={email.length === 0 || !phone || !password || !date}
         onClick={handleSubmit}
         variant="contained"
         sx={{ width: "82%", marginTop: "2rem", marginBottom: "1rem" }}
