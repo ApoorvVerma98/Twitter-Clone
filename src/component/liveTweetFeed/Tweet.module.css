@@ -1,80 +1,106 @@
 .post {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid var(--twitter-background);
-    padding-bottom: 10px;
-    padding: 20px;
-    width: 100%;
-  }
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--twitter-background);
+  padding-bottom: 10px;
+  padding: 20px;
+  width: 100%;
+}
 
-  .post:hover{
-    background-color: #eff1f1;
-  }
-  
-  .post__body {
-    flex: 1;
+.post:hover {
+  background-color: #eff1f1;
+}
+
+.post__body {
+  flex: 1;
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.image {
+  width: 92%;
+  height: 15rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.post__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 91%;
+}
+
+.post__headerDescription {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.post_headerText > h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.badgeDiv {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.post__headerSpecial {
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
+}
+
+.post_headerDescription {
+  /* border: 1px solid red; */
+  margin-left: 0.5rem;
+}
+
+.post_headerDescription > p {
+  width: 92%;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
-    /* border: 1px solid red; */
   }
   
- 
-  .image{
-    width: 92%;
-    height: 15rem;
-    border-radius: 10px;
-    object-fit: cover;
+  .image {
+    width: 100%;
+    height: auto;
   }
   
   .post__footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 91%;
-  }
-  
-  .post__headerDescription {
-    margin-bottom: 10px;
-    font-size: 15px;
-   
-
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-around;
   }
   
   .post_headerText > h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
-
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 0;
   }
   
+  .badgeDiv {
+    margin-left: 0;
+  }
   
- .badgeDiv{
-  
-    display:  flex;
-    align-items: center;
-    margin-left: 0.5rem;
- }
   .post__headerSpecial {
-    font-weight: 600;
-    font-size: 12px;
-    color: gray;
+    font-size: 14px;
   }
   
-  
-
-  .post_headerDescription{
-    /* border: 1px solid red; */
-    margin-left: 0.5rem;
+  .post_headerDescription {
+    margin-left: 0;
   }
-
-  .post_headerDescription>p{
-    width: 92%;
-    margin-bottom: 1rem;
-    text-align: justify;
-    text-justify: inter-word;
-   
-    
-  }
-
-  
+}
