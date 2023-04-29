@@ -10,19 +10,53 @@ import { CgMoreO } from "react-icons/cg";
 import { BiHomeCircle } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, DialogActions } from "@mui/material";
+import { TweetSlice } from "../storeComponent/reducer";
+import { useDispatch } from "react-redux";
+import PopOver from "./PopeOver";
+import {BsTwitter} from 'react-icons/bs'
+
 
 function LeftBarMenu() {
+  const Dispatch = useDispatch()
   const [toggle, setToggle] = useState(false);
+  const [text, setText] = useState({
+    id: Math.floor(Math.random() * 100000 + 1),
+    content: "",
+    createdAt: Date.now(),
+    image: "",
+    tweetedBy: {
+      id: Math.floor(Math.random() * 100000 + 1),
+      name: "Avatar",
+    },
+    likeCount: 0,
+    commentCount: 0,
+    reTweetsCount: 0,
+    isLiked: false,
+  });
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
+  const handleTextchange = (e) => {
+    const { value } = e.target;
+    setText({
+      ...text,
+      content: value,
+      image:`https://picsum.photos/1000/500?q=${Math.floor(Math.random()*9+1)}`
+    });
+  };
+
+  const hadleTweet = () => {
+    Dispatch(TweetSlice.actions.addTweet(text))
+    setToggle(false);
+  };
+
   return (
-    <div className={styles.sidebar}> 
+    <div className={styles.sidebar}>
       <div className={styles.sidebar__item}>
-        <div className={styles.twitterLogo}>
-          <FaTwitter />
+        <div className={styles.twitterLogoDiv}>
+        <BsTwitter className={styles.twitterLogo} />
         </div>
       </div>
       <div className={styles.sidebar__item}>
@@ -70,7 +104,7 @@ function LeftBarMenu() {
       <div className={styles.sidebar__tweet}>
         <button onClick={handleToggle}>Tweet</button>
       </div>
-      <div className={styles.sidebar__profile}>
+      {/* <div className={styles.sidebar__profile}>
         <img src="https://picsum.photos/id/237/200/300" alt="User profile" />
         <div className={styles.sidebar__profileInfo}>
           <h4>John Doe</h4>
@@ -79,7 +113,9 @@ function LeftBarMenu() {
         <div className={styles.sidebar__icon}>
           <CgMoreO />
         </div>
-      </div>
+      </div> */}
+      
+      <PopOver />
       <div>
         <Dialog open={toggle}>
           <div className={styles.imagDiv}>
@@ -97,10 +133,13 @@ function LeftBarMenu() {
           <textarea
             className={styles.ForTweet}
             placeholder="What is happening ?"
+            onChange={handleTextchange}
           />
 
           <DialogActions>
-            <button className={styles.TweetBtn}>tweet</button>
+            <button onClick={hadleTweet} className={styles.TweetBtn}>
+              tweet
+            </button>
           </DialogActions>
         </Dialog>
       </div>

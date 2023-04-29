@@ -69,38 +69,5 @@
 }
 
 @media (max-width: 768px) {
-  .post {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .post__footer {
-    width: 100%;
-    margin-top: 10px;
-    justify-content: space-around;
-  }
-  
-  .post_headerText > h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding-left: 0;
-  }
-  
-  .badgeDiv {
-    margin-left: 0;
-  }
-  
-  .post__headerSpecial {
-    font-size: 14px;
-  }
-  
-  .post_headerDescription {
-    margin-left: 0;
-  }
+
 }

@@ -4,7 +4,6 @@ import style from "./TrendingBar.module.css";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Dialog2 from "../../dialogForRigtBar/Dialog2";
 import CustomButton from "./Buttons";
-
 const Trends = () => {
   const [isNotIntrested, setIsNotIntrested] = useState([
     {
@@ -44,10 +43,10 @@ const Trends = () => {
     },
   ]);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending , setTrendings] = useState(isNotIntrested)
-  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false)
+  const [trending, setTrendings] = useState(isNotIntrested);
+  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false);
   const updateId = (id) => setSelectedId(id);
-  const[data,setData]=useState([...trending])
+  const [data, setData] = useState([...trending]);
   const HandleClick = () => {
     const tempArr = [];
     trending.forEach((el) => {
@@ -56,18 +55,15 @@ const Trends = () => {
       }
     });
     setTrendings(tempArr);
-    setData(tempArr)
+    setData(tempArr);
   };
 
-
-
-  function handleRequestSeeAll () {
-    setIsShowingAllTrendings(!isShowingAllTrendings)
-    if(isShowingAllTrendings) {
-       return setTrendings(trending.slice(0,3))
-    }else
-    setTrendings(data)
-}
+  function handleRequestSeeAll() {
+    setIsShowingAllTrendings(!isShowingAllTrendings);
+    if (isShowingAllTrendings) {
+      return setTrendings(trending.slice(0, 3));
+    } else setTrendings(data);
+  }
 
   return (
     <div className={style.keywords}>
@@ -78,7 +74,7 @@ const Trends = () => {
         {trending.map((keyword) => {
           return (
             <div
-            key={keyword.id}
+              key={keyword.id}
               className={style.container}
               onClick={() => {
                 updateId(keyword.id);
@@ -94,7 +90,7 @@ const Trends = () => {
                 </div>
               </div>
               <div className={style.btn}>
-              <Dialog2
+                <Dialog2
                   onClick={HandleClick}
                   title={
                     <div>
@@ -116,7 +112,7 @@ const Trends = () => {
         <div>
           <CustomButton
             customCss={style.btn2}
-            buttonText= {isShowingAllTrendings ? 'Show Less' : 'Show More'} 
+            buttonText={isShowingAllTrendings ? "Show Less" : "Show More"}
             btnNext={handleRequestSeeAll}
           />
         </div>
