@@ -4,12 +4,15 @@ import { TextField, Button } from "@mui/material";
 import { Snackbar } from "@mui/material";
 import Joi from "@hapi/joi";
 import { useSelector, useDispatch } from "react-redux";
-import {userSlice} from "../../component/storeComponent/reducer";
-
+import { userSlice } from "../../component/storeComponent/reducer";
+import { AiFillCloseCircle } from "react-icons/ai";
+import swal from "sweetalert2";
+import { useNavigate } from "react-router";
 let id;
 let idPassword;
 let idPhone;
-function SignupUpPopup() {
+function SignupUpPopup(props) {
+  const { setOpen, open } = props;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,7 +24,7 @@ function SignupUpPopup() {
   const [passwordError, setPasswordError] = useState("");
   const [phoneError, setphoneErorr] = useState("");
   const dispatch = useDispatch();
-
+  const Navigate = useNavigate();
   const handleChangeName = (event) => {
     const { value } = event.target;
     setName(value);
@@ -147,10 +150,26 @@ function SignupUpPopup() {
     setPhone("");
     setpassword("");
     setDate("");
+    swal.fire({
+      icon: "success",
+      title: "😎😎😎😎 ",
+      text: "Signup Succces!",
+      // footer: '<a href="">Why do I have this issue?</a>'
+    });
+
+    setTimeout(() => {
+      Navigate("/signin");
+    }, 1000);
   };
 
   return (
     <div className={style.container}>
+      <span className={style.closeBtn}>
+        <AiFillCloseCircle
+          onClick={() => setOpen(false)}
+          className={style.closeIcon}
+        />
+      </span>
       <h1>Create your account</h1>
       <TextField
         label="Name"

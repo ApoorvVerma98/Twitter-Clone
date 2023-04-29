@@ -7,11 +7,15 @@ import { NavLink } from "react-router-dom";
 import Joi from "joi";
 import styles from "./SignIn.module.css";
 import { FaTwitter } from "react-icons/fa";
+import swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function TwitterLogin() {
+  const Navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const schema = Joi.object({
     username: Joi.string().required(),
@@ -34,15 +38,30 @@ function TwitterLogin() {
       setError(error.message);
       return;
     }
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const existingUser = users.find((user) => user.username === username);
-    if (existingUser) {
-      setError("User already exists");
+    const userdata = JSON.parse(localStorage.getItem("userdata")) || [];
+    console.log(userdata);
+    const existingUser = userdata.find((user) => user.email === username);
+
+    if (existingUser == undefined) {
+      swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "User not found!",
+      });
       return;
     }
-    users.push(data);
-    localStorage.setItem("users", JSON.stringify(users));
-    // history.push(`/home?username=${username}`);
+
+    localStorage.setItem("logedUser", JSON.stringify(data));
+
+    swal.fire({
+      icon: "success",
+      title: "😎😎😎😎 ",
+      text: "Logged In!",
+      // footer: '<a href="">Why do I have this issue?</a>'
+    });
+    setTimeout(() => {
+      Navigate("/");
+    }, 2000);
   }
 
   return (
