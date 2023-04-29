@@ -55,6 +55,7 @@ function PostTweet() {
         style={{ marginLeft: "5rem", outline: "none", fontSize: "20px" }}
         className={style.tweetBox__imageInput}
         onChange={handleChang}
+        value={tweetdata.content}
       />
 
       <Button
