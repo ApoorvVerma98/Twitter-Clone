@@ -1,20 +1,20 @@
 .feed {
-  /* flex: 0.4;
-  border-right: 1px solid var(--twitter-background);
-  min-width: fit-content;*/
+
   overflow-y: scroll; 
   max-height: 100vh;
+  width: 94%;
+  margin-right: 0;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 .feed::-webkit-scrollbar {
   display: none;
 } 
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.feed {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+ 
+.feed { 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 .feed__header {
@@ -26,13 +26,74 @@
   padding: 15px 20px;
 }
 
+.Avatar{
+  display: none !important;
+}
+.twitterLogo{
+  display: none;
+}
+
 .feed__header > h2 {
   font-size: 20px;
   font-weight: 800;
 }
 
-@media (max-width: 768px) {
-  .feed {
-    max-height: 50vh;
-  }
+.footer{
+  display: none;
 }
+
+@media (max-width: 768px) {
+  .feed{
+ margin-top: 0;
+  width: 100vw;
+  margin-left: -6.1rem;
+  }
+  .feed__header{
+ 
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .Avatar{
+    display: block !important;
+  }
+  .feed__header h2{
+    display: none;
+  }
+  .twitterLogo{
+    display: block;
+    margin-left: 8rem;
+    font-size: 30px;
+    color:#00acee;
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #ffff;
+    height: 3.3rem;
+    align-items: center;
+  }
+  .footerHome{
+    font-size: 30px;
+    color: black;
+    margin-left: 10px;
+  }
+  .footerSearch{
+    font-size: 30px;
+    color: black;
+
+
+  }
+  .footerNotification{
+    font-size: 25px;
+  }
+  .footerEmail{
+    font-size: 30px;
+    color: black;
+    margin-right: 10px;
+
+  }
+} 

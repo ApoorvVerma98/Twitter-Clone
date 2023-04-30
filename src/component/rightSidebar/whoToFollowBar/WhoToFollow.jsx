@@ -16,13 +16,9 @@ function Righthomebox2() {
       text: "Elon Musk",
       text2: "@elonmusk",
     },
-    {
-      id: 2,
-      tag: <i className="fa fa-solid fa-badge-check"></i>,
-      src: " https://pbs.twimg.com/profile_images/1262261228652675072/Pl_u58Pb_400x400.jpg",
-      text: "Amitabh Bachan ",
-      text2: "@amitabh",
-    },
+
+   
+
     {
       id: 3,
       tag: <i className="fa fa-solid fa-badge-check"></i>,
@@ -73,7 +69,7 @@ function Righthomebox2() {
       }
       setTrendings(followContainer)
   }
-  return (
+  return ( 
     <div className={style.container}>
       <h1>Who to follow</h1>
       <div className={style.main}>

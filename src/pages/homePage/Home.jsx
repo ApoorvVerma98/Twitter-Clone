@@ -14,8 +14,10 @@ const Home = () => {
       <div className={style.TweetContainer}>
         <LiveTweet />
       </div>
-      <div className={style.RightSideBar}>
- < RightSideBar />
+
+      <div>
+ < RightSideBar /> 
+
       </div>
     </div> 
   );

@@ -5,6 +5,8 @@
   align-items: center;
   z-index: 999;
   background-color: white;
+
+
   }
   
   .searchInput {
@@ -21,11 +23,12 @@
   .searchButton {
   position: absolute;
   top: 50%;
-  right: 0.5rem;
+  left: 15rem;
   transform: translateY(-50%);
   border: none;
   background: none;
   cursor: pointer;
+ 
   }
   
   .searchButton:focus {
@@ -65,7 +68,7 @@
     .searchBar {
     padding: 1rem;
     }
-    
+     
     .searchInput {
     padding: 0.93rem 2rem;
     font-size: 1rem;

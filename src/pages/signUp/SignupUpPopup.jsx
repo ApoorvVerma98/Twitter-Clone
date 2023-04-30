@@ -78,7 +78,8 @@ function SignupUpPopup(props) {
     id = setTimeout(() => {
       const res = validate(value);
       if (res === true) {
-        setEmailError(false); 
+        setEmailError(false);
+  
 
         const isPresent = findEmail(value);
         setIsExists(isPresent);
@@ -178,7 +179,7 @@ function SignupUpPopup(props) {
         autoComplete="true"
         type="text"
         placeholder="Name"
-        sx={{ width: "82%", marginTop: "2rem" }}
+        sx={{ width: "82%", marginTop: "1rem" }}
         onChange={handleChangeName}
         value={name}
       />
@@ -187,7 +188,7 @@ function SignupUpPopup(props) {
         autoComplete="true"
         type="text"
         placeholder="Phone"
-        sx={{ width: "82%", marginTop: "2rem" }}
+        sx={{ width: "82%", marginTop: "1rem" }}
         onChange={handleChangePhone}
         value={phone}
       />
@@ -197,7 +198,7 @@ function SignupUpPopup(props) {
         autoComplete="true"
         type="text"
         placeholder="Email"
-        sx={{ width: "82%", marginTop: "2rem" }}
+        sx={{ width: "82%", marginTop: "1rem" }}
         onChange={handleEmailChange}
         value={email}
       />
@@ -210,7 +211,7 @@ function SignupUpPopup(props) {
         autoComplete="true"
         type="text"
         placeholder="Password"
-        sx={{ width: "82%", marginTop: "2rem" }}
+        sx={{ width: "82%", marginTop: "1rem" }}
         onChange={handleChangePassword}
         value={password}
       />
@@ -220,7 +221,7 @@ function SignupUpPopup(props) {
         autoComplete="true"
         type="Date"
         placeholder="Date"
-        sx={{ width: "82%", marginTop: "2rem" }}
+        sx={{ width: "82%", marginTop: "1rem" }}
         onChange={handleDateChange}
         value={date}
       />

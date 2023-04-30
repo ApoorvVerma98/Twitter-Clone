@@ -2,10 +2,17 @@
   width: 100%;
   color: black;
   margin-top: 2.4rem;
-  border-left:1px solid #EFF1F1;
-  border-right:1px solid #EFF1F1;
+
+  max-height: 20rem;
+  overflow-y: auto;
+ 
+}
+::-webkit-scrollbar {
+  display: none;
+
 }
 
+ 
 .key {
   background: #f7f9f9;
   padding: 0.45rem;

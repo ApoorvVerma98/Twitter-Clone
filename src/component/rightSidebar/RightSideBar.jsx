@@ -12,6 +12,6 @@ const RightSideBar = () => {
         <WhoToFollow />
     </div>
   )
-}
+} 
 
 export default RightSideBar

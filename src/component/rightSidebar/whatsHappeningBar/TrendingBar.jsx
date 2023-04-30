@@ -1,48 +1,57 @@
 import React, { useState } from "react";
 import style from "./TrendingBar.module.css";
-import { CgMoreO } from "react-icons/cg";
+
+
 
 const Trends = () => {
   const [trending, setTrendings] = useState([
     {
       id: 1,
-      country: "Trending in India",
-      keyword: "#Ms Dhoni",
+
+      country: "Trending in World",
+      keyword: "#Shahrukh Khan",
+
       totalKeywords: "7.5M Tweets",
     },
     {
       id: 2,
+
+      country: "Trending in Cricket",
+      keyword: "#Ms Dhoni",
+      totalKeywords: "6.1M Tweets",
+    }, 
+    {
+      id: 3,
+      country: "Trending",
+      keyword: "#GodiMedia",
+      totalKeywords: "4.5M Tweets",
+    },
+    {
+      id: 4,
+      country: "Trending in Entertainment",
+      keyword: "#Anushka Sharma",
+      totalKeywords: "3.9M Tweets",
+
       country: "Trending in world",
       keyword: "#Tom Cruise",
       totalKeywords: "6.5M Tweets",
     },
-    {
-      id: 3,
-      country: "Trending in Cricket",
-      keyword: "#RohitSharma",
-      totalKeywords: "5M Tweets",
-    },
-    {
-      id: 4,
-      country: "Trending in Cricket",
-      keyword: "#ViratKohli",
-      totalKeywords: "4.9M Tweets",
-    },
+  
     {
       id: 5,
       country: "Trending in Football",
-      keyword: "#Ronaldo",
-      totalKeywords: "3.9M Tweets",
+
+      keyword: "#Lionel Messi",
+      totalKeywords: "2000k Tweets",
     },
   ]);
 
-  const [showDialog, setShowDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
 
   const handleNotInterested = (id) => {
     const updatedTrending = trending.filter((keyword) => keyword.id !== id);
     setTrendings(updatedTrending);
-    setShowDialog(false);
+
   };
 
   return (
@@ -55,10 +64,8 @@ const Trends = () => {
           <div
             key={keyword.id}
             className={style.container}
-            onClick={() => {
-              setSelectedId(keyword.id);
-              setShowDialog(true);
-            }}
+            onClick={() => setSelectedId(keyword.id)}
+
           >
             <div>
               <div className={style.country}>{keyword.country}</div>
@@ -70,7 +77,15 @@ const Trends = () => {
               </div>
             </div>
             <div className={style.btn}>
-              <CgMoreO size={24} />
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleNotInterested(keyword.id);
+                }}
+              >
+                Not Interested
+              </button>
+
             </div>
           </div>
         ))}
