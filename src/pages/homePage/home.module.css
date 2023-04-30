@@ -13,22 +13,30 @@ body {
 }
 
 .homeContainer {
- 
+  
+  display: flex;
   width: 100%;
   height: 38rem;
   display: flex;
 }
 
-.sidebar {
-  width: 25%;
+.LeftSideBar {
+   width: 25%;
   height: 100%;
+
+  display: flex;
+}
+.RightSideBar{
+  width: 25%;
+  height: 100%; 
+   display: flex;
 }
 
-.mainContainer {
+.TweetContainer {
   width: 50%;
 }
 
-
+ 
 @media (max-width: 768px) {
   body{
     width: 100%;

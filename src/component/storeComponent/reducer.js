@@ -12,9 +12,9 @@ const userSlice = createSlice({
 });
 
 const TweetSlice = createSlice({
-  name: "Tweets",
+  name: "Tweets", 
   initialState: [],
-  reducers: {
+  reducers: { 
     AddAllTweet: (state, action) => {
       state.push(...action.payload);
     },

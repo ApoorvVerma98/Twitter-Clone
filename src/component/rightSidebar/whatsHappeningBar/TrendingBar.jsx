@@ -1,69 +1,61 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import style from "./TrendingBar.module.css";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import Dialog2 from "../../dialogForRigtBar/Dialog2";
-import CustomButton from "./Buttons";
+import { CgMoreO } from "react-icons/cg";
+import PopoverIcon from "./PopOver";
+
 const Trends = () => {
-  const [isNotIntrested, setIsNotIntrested] = useState([
+  const [trending, setTrendings] = useState
+
+  ([
     {
       id: 1,
-      isNotIntrested: false,
-      country: "Trending in India",
-      keyword: "#Ms Dhoni",
-      totalKeywords: "8000k Tweets",
+      country: "Trending in World",
+      keyword: "#Shahrukh Khan",
+      totalKeywords: "7.5M Tweets",
     },
     {
       id: 2,
-      isNotIntrested: false,
-      country: "Trending in India",
-      keyword: "#Virat kohli",
-      totalKeywords: "6000k Tweets",
+      country: "Trending in Cricket",
+      keyword: "#Ms Dhoni",
+      totalKeywords: "6.1M Tweets",
     },
     {
       id: 3,
-      isNotIntrested: false,
-      country: "Trending in Sports",
-      keyword: "#RohitSharma",
-      totalKeywords: "2560k Tweets",
+      country: "Trending",
+      keyword: "#GodiMedia",
+      totalKeywords: "4.5M Tweets",
     },
     {
       id: 4,
-      isNotIntrested: true,
-      country: "Trending in Sports",
-      keyword: "#ViratKohli",
-      totalKeywords: "2000k Tweets",
+      country: "Trending in Entertainment",
+      keyword: "#Anushka Sharma",
+      totalKeywords: "3.9M Tweets",
     },
     {
       id: 5,
-      isNotIntrested: false,
-      country: "Trending in Sports",
-      keyword: "#sachin",
-      totalKeywords: "2000k Tweets",
+      country: "Trending in Football",
+      keyword: "#Lionel Messi",
+      totalKeywords: "2.9M Tweets",
     },
   ]);
+
+  const [anchorEl, setAnchorEl] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending, setTrendings] = useState(isNotIntrested);
-  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false);
-  const updateId = (id) => setSelectedId(id);
-  const [data, setData] = useState([...trending]);
-  const HandleClick = () => {
-    const tempArr = [];
-    trending.forEach((el) => {
-      if (el.id !== selectedId) {
-        tempArr.push(el);
-      }
-    });
-    setTrendings(tempArr);
-    setData(tempArr);
+
+  const handleNotInterested = (id) => {
+    const updatedTrending = trending.filter((keyword) => keyword.id !== id);
+    setTrendings(updatedTrending);
+    setAnchorEl(null);
   };
 
-  function handleRequestSeeAll() {
-    setIsShowingAllTrendings(!isShowingAllTrendings);
-    if (isShowingAllTrendings) {
-      return setTrendings(trending.slice(0, 3));
-    } else setTrendings(data);
-  }
+  const handlePopoverOpen = (event, id) => {
+    setSelectedId(id);
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div className={style.keywords}>
@@ -71,51 +63,30 @@ const Trends = () => {
         <div className={style.keyword__heading}>
           <h4 className={style.heading4}>What's happening</h4>
         </div>
-        {trending.map((keyword) => {
-          return (
-            <div
-              key={keyword.id}
-              className={style.container}
-              onClick={() => {
-                updateId(keyword.id);
-              }}
-            >
-              <div key={keyword.id}>
-                <div className={style.country}>{keyword.country}</div>
-                <div className={style.keyword__name}>
-                  <strong>{keyword.keyword}</strong>
-                </div>
-                <div className={style.keyword__tweets}>
-                  {keyword.totalKeywords}
-                </div>
+        {trending.map((keyword) => (
+          <div key={keyword.id} className={style.container}>
+            <div>
+              <div className={style.country}>{keyword.country}</div>
+              <div className={style.keyword__name}>
+                <strong>{keyword.keyword}</strong>
               </div>
-              <div className={style.btn}>
-                <Dialog2
-                  onClick={HandleClick}
-                  title={
-                    <div>
-                      <SentimentVeryDissatisfiedIcon /> This trend is harmful or
-                      spammy
-                    </div>
-                  }
-                  content={
-                    <p>
-                      <SentimentVeryDissatisfiedIcon />
-                      IsnotIntrested
-                    </p>
-                  }
-                />
+              <div className={style.keyword__tweets}>
+                {keyword.totalKeywords}
               </div>
             </div>
-          );
-        })}
-        <div>
-          <CustomButton
-            customCss={style.btn2}
-            buttonText={isShowingAllTrendings ? "Show Less" : "Show More"}
-            btnNext={handleRequestSeeAll}
+            <div className={style.btn} onClick={(e) => handlePopoverOpen(e, keyword.id)}>
+              <CgMoreO size={24} />
+            </div>
+          </div>
+        ))}
+        {anchorEl && (
+          <PopoverIcon
+            open={Boolean(anchorEl)}
+            onClose={handlePopoverClose}
+            anchorEl={anchorEl}
+            onNotInterestedClick={() => handleNotInterested(selectedId)}
           />
-        </div>
+        )}
       </div>
     </div>
   );

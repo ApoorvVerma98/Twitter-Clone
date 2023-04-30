@@ -6,13 +6,12 @@ const LeftSideBar = () => {
   return (
     <div>
       <LeftBarMenu/>
-
       </div>
       )
       }
 
 
-
+ 
 
 export default LeftSideBar
 

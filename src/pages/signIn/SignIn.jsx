@@ -9,9 +9,9 @@ import styles from "./SignIn.module.css";
 import { FaTwitter } from "react-icons/fa";
 import swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-
+ 
 function TwitterLogin() {
-  const Navigate = useNavigate();
+  const Navigate = useNavigate(); 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);

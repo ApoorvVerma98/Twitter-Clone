@@ -8,7 +8,9 @@ import store from "./component/storeComponent/store";
 
 function App() {
   return (
-    <div className='App'>
+
+    <div className='App'>  
+
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<SignIn />} />

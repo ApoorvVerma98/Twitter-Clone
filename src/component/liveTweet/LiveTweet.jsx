@@ -13,7 +13,7 @@ import {GrNotification} from 'react-icons/gr'
 import {MdOutlineEmail} from 'react-icons/md'
 function LiveTweet() {
   const dispatch = useDispatch();
-
+ 
   useEffect(() => {
     fetch("/Tweet.json")
       .then((res) => res.json())

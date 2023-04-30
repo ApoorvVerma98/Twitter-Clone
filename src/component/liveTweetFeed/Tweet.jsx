@@ -25,7 +25,7 @@ function Tweet(props) {
   const handleRetweet = () => {
     dispatch(TweetSlice.actions.addretweet(tweet));
   };
-
+ 
   const handleComment = () => {
     dispatch(TweetSlice.actions.addComment(tweet));
   };

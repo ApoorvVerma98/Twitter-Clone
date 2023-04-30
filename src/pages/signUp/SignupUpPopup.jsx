@@ -79,6 +79,7 @@ function SignupUpPopup(props) {
       const res = validate(value);
       if (res === true) {
         setEmailError(false);
+  
 
         const isPresent = findEmail(value);
         setIsExists(isPresent);

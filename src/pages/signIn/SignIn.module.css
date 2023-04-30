@@ -15,8 +15,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+ 
 .title {
+
   word-wrap: break-word;
   min-width: 0px;
   color: inherit;

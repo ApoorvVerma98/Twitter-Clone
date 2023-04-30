@@ -14,8 +14,9 @@ function PostTweet() {
     tweetedBy: {
       id: Math.floor(Math.random() * 100000 + 1),
       name: "Avatar",
-    },
+    }, 
     likeCount: 0,
+
     commentCount: 0,
     reTweetsCount: 0,
     isLiked: false,

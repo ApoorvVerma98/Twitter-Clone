@@ -10,14 +10,16 @@
 .post:hover {
   background-color: #eff1f1;
 }
-
+ .post:hover.post-title {
+    color: var(--twitter-accent);
+  }
 .post__body {
   flex: 1;
   padding: 10px;
   /* border: 1px solid red; */
 }
 
-.image {
+.image  {
   width: 92%;
   height: 15rem;
   border-radius: 10px;

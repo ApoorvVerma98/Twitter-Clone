@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./LeftBarMenu.module.css";
-import { FaTwitter } from "react-icons/fa";
 import { NotificationsOutlined } from "@mui/icons-material";
 import { BiHash } from "react-icons/bi";
 import { MdOutlineMail } from "react-icons/md";
@@ -12,12 +11,14 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, DialogActions } from "@mui/material";
 import { TweetSlice } from "../storeComponent/reducer";
 import { useDispatch } from "react-redux";
-import PopOver from "./PopeOver";
+import PopOver from "./UserPopOver";
 import {BsTwitter} from 'react-icons/bs'
 
 
+ 
 function LeftBarMenu() {
   const Dispatch = useDispatch()
+
   const [toggle, setToggle] = useState(false);
   const [text, setText] = useState({
     id: Math.floor(Math.random() * 100000 + 1),

@@ -10,28 +10,19 @@
   border-right: 1px solid rgb(238, 233, 233);
   padding-left: 4rem;
   margin-left: 2.6rem;
+}
  
-}
 
-.twitterLogoDiv {
-  color: rgb(29, 155, 240);
-  border-radius: 50%;
-  padding: 8px;
-  transition: background-color 0.2s ease-in-out;
-}
 .twitterLogo{
   color: rgb(29, 155, 240) !important;
+  
 
 }
 
-.twitterLogo:hover {
-  background-color: rgba(29, 155, 240, 0.1);
-}
 
 .sidebar__icon {
-  color: #0f1419;
+  color: black;
 }
-
 .sidebar__item {
   display: flex;
   align-items: center;
