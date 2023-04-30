@@ -4,14 +4,14 @@
   position: fixed;
   top: 0;
   bottom: 0;
+
   left: 0;
   width: 20%;
   overflow-y: auto;
   border-right: 1px solid rgb(238, 233, 233);
   padding-left: 4rem;
   margin-left: 2.6rem;
- 
-}
+
  
 .twitterLogoDiv {
   color: rgb(29, 155, 240);

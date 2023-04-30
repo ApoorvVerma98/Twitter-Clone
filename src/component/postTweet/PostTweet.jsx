@@ -16,6 +16,7 @@ function PostTweet() {
       name: "Avatar",
     }, 
     likeCount: 0,
+
     commentCount: 0,
     reTweetsCount: 0,
     isLiked: false,
