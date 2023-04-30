@@ -6,7 +6,6 @@ const LeftSideBar = () => {
   return (
     <div>
       <LeftBarMenu/>
-
       </div>
       )
       }

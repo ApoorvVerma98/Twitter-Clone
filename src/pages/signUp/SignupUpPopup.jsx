@@ -78,7 +78,7 @@ function SignupUpPopup(props) {
     id = setTimeout(() => {
       const res = validate(value);
       if (res === true) {
-        setEmailError(false);
+        setEmailError(false); 
 
         const isPresent = findEmail(value);
         setIsExists(isPresent);

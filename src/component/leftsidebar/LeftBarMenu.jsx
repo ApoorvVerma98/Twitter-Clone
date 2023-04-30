@@ -11,7 +11,7 @@ import { BiHomeCircle } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, DialogActions } from "@mui/material";
 
-function LeftBarMenu() { 
+function LeftBarMenu() {  
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {

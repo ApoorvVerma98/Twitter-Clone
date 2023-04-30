@@ -28,7 +28,7 @@ body {
 }
 .RightSideBar{
   width: 25%;
-  height: 100%;
+  height: 100%; 
    display: flex;
 }
 

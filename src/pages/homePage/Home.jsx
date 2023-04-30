@@ -17,7 +17,7 @@ const Home = () => {
       <div className={style.RightSideBar}>
  < RightSideBar />
       </div>
-    </div>
+    </div> 
   );
 };
 

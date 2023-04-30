@@ -9,7 +9,7 @@ import PostTweet from "../postTweet/PostTweet";
 
 function LiveTweet() {
   const dispatch = useDispatch();
-
+ 
   useEffect(() => {
     fetch("/Tweet.json")
       .then((res) => res.json())
