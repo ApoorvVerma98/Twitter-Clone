@@ -79,7 +79,7 @@ function TwitterLogin() {
           </Button>
           <Button className={styles.appleButton} startIcon={<AppleIcon />}>
             Sign in with Apple
-          </Button>
+          </Button> 
         </div>
         <form onSubmit={handleSubmit}>
           <Box className={styles.inputContainer}>

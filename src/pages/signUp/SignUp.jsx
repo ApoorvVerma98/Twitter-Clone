@@ -5,7 +5,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import SignupUpPopup from "./SignupUpPopup";
 
-
 function SignUp() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -13,7 +12,7 @@ function SignUp() {
     e.preventDefault();
     setOpen(!open);
   };
- 
+
   return (
     <div>
       {open ? (
