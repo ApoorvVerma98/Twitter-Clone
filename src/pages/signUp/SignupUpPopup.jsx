@@ -167,6 +167,7 @@ function SignupUpPopup(props) {
 
   return (
     <div className={style.container}>
+      <div className={style.overlay}>
       <span className={style.closeBtn}>
         <AiFillCloseCircle
           onClick={() => setOpen(false)}
@@ -196,6 +197,7 @@ function SignupUpPopup(props) {
       <TextField
         label="Email"
         autoComplete="true"
+        variant="filled"
         type="text"
         placeholder="Email"
         sx={{ width: "82%", marginTop: "1rem" }}
@@ -209,6 +211,7 @@ function SignupUpPopup(props) {
       <TextField
         label="Password"
         autoComplete="true"
+        variant="filled"
         type="text"
         placeholder="Password"
         sx={{ width: "82%", marginTop: "1rem" }}
@@ -240,6 +243,7 @@ function SignupUpPopup(props) {
       >
         Sign Up
       </Button>
+      </div>
     </div>
   );
 }
