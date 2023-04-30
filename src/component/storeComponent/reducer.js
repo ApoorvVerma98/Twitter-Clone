@@ -38,10 +38,20 @@ const TweetSlice = createSlice({
       }
       data.isLiked = !data.isLiked;
     },
-    addTweet:(state,action)=>{
-        state.unshift(action.payload)
-    }
+    addTweet: (state, action) => {
+      state.unshift(action.payload);
+    },
   },
 });
 
-export { userSlice, TweetSlice };
+const LoggedSlice = createSlice({
+  name: "logged In",
+  initialState: JSON.parse(localStorage.getItem("auth")) || {},
+  reducers: {
+    isLogged: (state, action) => {
+      state=action.payload;
+    },
+  },
+});
+
+export { userSlice, TweetSlice, LoggedSlice };

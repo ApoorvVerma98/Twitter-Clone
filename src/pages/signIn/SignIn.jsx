@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { FcGoogle } from "react-icons/fc";
@@ -9,8 +9,10 @@ import styles from "./SignIn.module.css";
 import { FaTwitter } from "react-icons/fa";
 import swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-
+import {Link} from 'react-router-dom';
 function TwitterLogin() {
+
+
   const Navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -51,17 +53,20 @@ function TwitterLogin() {
       return;
     }
 
-    localStorage.setItem("logedUser", JSON.stringify(data));
-
+    localStorage.setItem("auth", JSON.stringify({...existingUser,isLoggedIn:true}));
+    
     swal.fire({
       icon: "success",
       title: "😎😎😎😎 ",
       text: "Logged In!",
       // footer: '<a href="">Why do I have this issue?</a>'
     });
-    setTimeout(() => {
-      Navigate("/");
-    }, 2000);
+    
+    setTimeout(()=>{
+      Navigate("/")
+
+    },1000)
+ 
   }
 
   return (
@@ -121,7 +126,8 @@ function TwitterLogin() {
         </form>
         <div className={styles.signupContainer}>
           <p>
-            Don't have an account? <a href="./SignUp">Sign up</a>
+            Don't have an account? 
+            <Link to="/signup">Sign up</Link>
           </p>
         </div>
       </Box>
@@ -129,4 +135,4 @@ function TwitterLogin() {
   );
 }
 
-export default TwitterLogin;
+export default TwitterLogin;
