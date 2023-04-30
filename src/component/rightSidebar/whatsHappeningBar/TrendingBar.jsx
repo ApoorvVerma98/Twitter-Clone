@@ -14,7 +14,7 @@ const Trends = () => {
       country: "Trending in Cricket",
       keyword: "#Ms Dhoni",
       totalKeywords: "6.1M Tweets",
-    },
+    }, 
     {
       id: 3,
       country: "Trending",

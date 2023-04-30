@@ -13,7 +13,7 @@ function SignUp() {
     e.preventDefault();
     setOpen(!open);
   };
-
+ 
   return (
     <div>
       {open ? (

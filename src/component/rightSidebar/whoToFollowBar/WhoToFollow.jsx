@@ -67,7 +67,7 @@ function Righthomebox2() {
       }
       setTrendings(followContainer)
   }
-  return (
+  return ( 
     <div className={style.container}>
       <h1>Who to follow</h1>
       <div className={style.main}>

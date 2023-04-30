@@ -16,7 +16,7 @@ const Home = () => {
         <LiveTweet />
       </div>
       <div>
- < RightSideBar />
+ < RightSideBar /> 
       </div>
     </div>
   );
