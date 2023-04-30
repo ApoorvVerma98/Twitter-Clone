@@ -31,14 +31,14 @@ function Righthomebox2() {
       tag: <i className="fa fa-solid fa-badge-check"></i>,
       src: "https://pbs.twimg.com/profile_images/1565985672501927936/d-r-h241_400x400.jpg",
       text: "Narendra Modi",
-      text2: "@modinarendra",
+      text2: "@modi",
     },
     {
       id: 5,
       tag: <i className="fa fa-solid fa-badge-check"></i>,
-      src:"https://pbs.twimg.com/profile_images/1645253133352964096/0zNm7Fw9_400x400.jpg",
-      text: "Mahendra Singh Dhoni",
-      text2: "@dhoni007",
+      src:"https://pbs.twimg.com/profile_images/1611332347470692353/h5JnKeil_400x400.jpg",
+      text: "Lionel Messi",
+      text2: "@Messi",
     },
     {
       id: 6,

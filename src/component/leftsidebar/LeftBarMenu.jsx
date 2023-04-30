@@ -12,7 +12,9 @@ import { Dialog, DialogActions } from "@mui/material";
 import { TweetSlice } from "../storeComponent/reducer";
 import { useDispatch } from "react-redux";
 import PopOver from "./UserPopOver";
-import {BsTwitter} from 'react-icons/bs'
+import {BsTwitter} from 'react-icons/bs';
+import { NavLink } from "react-router-dom";
+
 
 
  
@@ -57,65 +59,55 @@ function LeftBarMenu() {
     <div className={styles.sidebar}>
       <div className={styles.sidebar__item}>
         <div className={styles.twitterLogoDiv}>
-        <BsTwitter className={styles.twitterLogo} />
-        </div>
+        <NavLink to="/">
+          <BsTwitter className={styles.twitterLogo} />
+        </NavLink>        </div>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BiHomeCircle />
+          <BiHomeCircle style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>Home</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BiHash />
+          <BiHash  style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>Explore</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <MdOutlineMail />
-        </div>
-        <span className={styles.sidebar__text}>Messages</span>
-      </div>
-      <div className={styles.sidebar__item}>
-        <div className={styles.sidebar__icon}>
-          <NotificationsOutlined />
+          <NotificationsOutlined style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>Notifications</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BsBookmark />
+          <MdOutlineMail style={{ color: 'rgb(15, 20, 25)' }}/>
+        </div>
+        <span className={styles.sidebar__text}>Messages</span>
+      </div>
+      <div className={styles.sidebar__item}>
+        <div className={styles.sidebar__icon}>
+          <BsBookmark style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>Bookmarks</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <IoPerson />
+          <IoPerson style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>Profile</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <CgMoreO />
+          <CgMoreO style={{ color: 'rgb(15, 20, 25)' }}/>
         </div>
         <span className={styles.sidebar__text}>More</span>
       </div>
       <div className={styles.sidebar__tweet}>
         <button onClick={handleToggle}>Tweet</button>
-      </div>
-      {/* <div className={styles.sidebar__profile}>
-        <img src="https://picsum.photos/id/237/200/300" alt="User profile" />
-        <div className={styles.sidebar__profileInfo}>
-          <h4>John Doe</h4>
-          <p>@johndoe</p>
-        </div>
-        <div className={styles.sidebar__icon}>
-          <CgMoreO />
-        </div>
-      </div> */}
-      
+      </div>     
       <PopOver />
       <div>
         <Dialog open={toggle}>
