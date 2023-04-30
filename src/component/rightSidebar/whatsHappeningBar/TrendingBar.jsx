@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import style from "./TrendingBar.module.css";
+import { CgMoreO } from "react-icons/cg";
+import PopoverIcon from "./PopOver";
 
 const Trends = () => {
-  const [trending, setTrendings] = useState([
+  const [trending, setTrendings] = useState
+
+  ([
     {
       id: 1,
       country: "Trending in World",
@@ -31,16 +35,26 @@ const Trends = () => {
       id: 5,
       country: "Trending in Football",
       keyword: "#Lionel Messi",
-      totalKeywords: "2000k Tweets",
+      totalKeywords: "2.9M Tweets",
     },
   ]);
 
+  const [anchorEl, setAnchorEl] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
-  const [showDialog, setShowDialog] = useState(false);
 
   const handleNotInterested = (id) => {
     const updatedTrending = trending.filter((keyword) => keyword.id !== id);
     setTrendings(updatedTrending);
+    setAnchorEl(null);
+  };
+
+  const handlePopoverOpen = (event, id) => {
+    setSelectedId(id);
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -50,11 +64,7 @@ const Trends = () => {
           <h4 className={style.heading4}>What's happening</h4>
         </div>
         {trending.map((keyword) => (
-          <div
-            key={keyword.id}
-            className={style.container}
-            onClick={() => setSelectedId(keyword.id)}
-          >
+          <div key={keyword.id} className={style.container}>
             <div>
               <div className={style.country}>{keyword.country}</div>
               <div className={style.keyword__name}>
@@ -64,45 +74,20 @@ const Trends = () => {
                 {keyword.totalKeywords}
               </div>
             </div>
-            <div className={style.btn}>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowDialog(true);
-                }}
-              >
-                Not Interested
-              </button>
+            <div className={style.btn} onClick={(e) => handlePopoverOpen(e, keyword.id)}>
+              <CgMoreO size={24} />
             </div>
           </div>
         ))}
+        {anchorEl && (
+          <PopoverIcon
+            open={Boolean(anchorEl)}
+            onClose={handlePopoverClose}
+            anchorEl={anchorEl}
+            onNotInterestedClick={() => handleNotInterested(selectedId)}
+          />
+        )}
       </div>
-      {showDialog && (
-        <div className={style.dialog}>
-          <div className={style.dialog__box}>
-            <div className={style.dialog__header}>
-              <h3 className={style.heading3}>What would you like to do?</h3>
-              <button
-                className={style.close__btn}
-                onClick={() => setShowDialog(false)}
-              >
-                X
-              </button>
-            </div>
-            <div className={style.dialog__body}>
-              <button
-                className={style.not__interested}
-                onClick={() => {
-                  handleNotInterested(selectedId);
-                  setShowDialog(false);
-                }}
-              >
-                Not Interested
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

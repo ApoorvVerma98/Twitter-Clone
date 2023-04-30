@@ -11,7 +11,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, DialogActions } from "@mui/material";
 import { TweetSlice } from "../storeComponent/reducer";
 import { useDispatch } from "react-redux";
-import PopOver from "./PopeOver";
+import PopOver from "./UserPopOver";
 import {BsTwitter} from 'react-icons/bs'
 
 

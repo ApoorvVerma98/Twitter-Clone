@@ -3,7 +3,7 @@ import React from 'react'
 import Typography from '@mui/material/Typography';
 import Popover from '@mui/material/Popover';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
-import style from "./pupup.module.css"
+import style from "./UserPopOver.module.css"
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'; 
 import { useNavigate } from 'react-router-dom';
 const PopOver = () => {
