@@ -9,7 +9,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import swal from "sweetalert2";
 import { useNavigate } from "react-router";
 
-
 let id;
 let idPassword;
 let idPhone;
@@ -79,7 +78,6 @@ function SignupUpPopup(props) {
       const res = validate(value);
       if (res === true) {
         setEmailError(false);
-  
 
         const isPresent = findEmail(value);
         setIsExists(isPresent);
@@ -168,81 +166,81 @@ function SignupUpPopup(props) {
   return (
     <div className={style.container}>
       <div className={style.overlay}>
-      <span className={style.closeBtn}>
-        <AiFillCloseCircle
-          onClick={() => setOpen(false)}
-          className={style.closeIcon}
+        <span className={style.closeBtn}>
+          <AiFillCloseCircle
+            onClick={() => setOpen(false)}
+            className={style.closeIcon}
+          />
+        </span>
+        <h1>Create your account</h1>
+        <TextField
+          label="Name"
+          autoComplete="true"
+          type="text"
+          placeholder="Name"
+          sx={{ width: "82%", marginTop: "1rem" }}
+          onChange={handleChangeName}
+          value={name}
         />
-      </span>
-      <h1>Create your account</h1>
-      <TextField
-        label="Name"
-        autoComplete="true"
-        type="text"
-        placeholder="Name"
-        sx={{ width: "82%", marginTop: "1rem" }}
-        onChange={handleChangeName}
-        value={name}
-      />
-      <TextField
-        label="Phone"
-        autoComplete="true"
-        type="text"
-        placeholder="Phone"
-        sx={{ width: "82%", marginTop: "1rem" }}
-        onChange={handleChangePhone}
-        value={phone}
-      />
+        <TextField
+          label="Phone"
+          autoComplete="true"
+          type="text"
+          placeholder="Phone"
+          sx={{ width: "82%", marginTop: "1rem" }}
+          onChange={handleChangePhone}
+          value={phone}
+        />
 
-      <TextField
-        label="Email"
-        autoComplete="true"
-        variant="filled"
-        type="text"
-        placeholder="Email"
-        sx={{ width: "82%", marginTop: "1rem" }}
-        onChange={handleEmailChange}
-        value={email}
-      />
+        <TextField
+          label="Email"
+          autoComplete="true"
+          variant="filled"
+          type="text"
+          placeholder="Email"
+          sx={{ width: "82%", marginTop: "1rem" }}
+          onChange={handleEmailChange}
+          value={email}
+        />
 
-      {isExists && <p>User Exists</p>}
-      {emailError && <p>{emailError}</p>}
+        {isExists && <p>User Exists</p>}
+        {emailError && <p>{emailError}</p>}
 
-      <TextField
-        label="Password"
-        autoComplete="true"
-        variant="filled"
-        type="text"
-        placeholder="Password"
-        sx={{ width: "82%", marginTop: "1rem" }}
-        onChange={handleChangePassword}
-        value={password}
-      />
-      {passwordError && <p>{passwordError}</p>}
+        <TextField
+          label="Password"
+          autoComplete="true"
+          variant="filled"
+          type="text"
+          placeholder="Password"
+          sx={{ width: "82%", marginTop: "1rem" }}
+          onChange={handleChangePassword}
+          value={password}
+        />
+        {passwordError && <p>{passwordError}</p>}
 
-      <TextField
-        autoComplete="true"
-        type="Date"
-        placeholder="Date"
-        sx={{ width: "82%", marginTop: "1rem" }}
-        onChange={handleDateChange}
-        value={date}
-      />
+        <TextField
+          autoComplete="true"
+          type="Date"
+          placeholder="Date"
+          sx={{ width: "82%", marginTop: "1rem" }}
+          onChange={handleDateChange}
+          value={date}
+        />
 
-      <h1 className={style.textcontent}>Date of birth</h1>
-      <p className={style.para}>
-        This will not be shown publicly. Confirm your own age, even if this
-        account is for a business, a pet, or something else.
-      </p>
+        <h1 className={style.textcontent}>Date of birth</h1>
+        <p className={style.para}>
+          This will not be shown publicly. Confirm your own age, even if this
+          account is for a business, a pet, or something else.
+        </p>
 
-      <Button
-        disabled={email.length === 0 || !phone || !password || !date}
-        onClick={handleSubmit}
-        variant="contained"
-        sx={{ width: "82%", marginTop: "2rem", marginBottom: "1rem" }}
-      >
-        Sign Up
-      </Button>
+        <Button
+          disabled={email.length === 0 || !phone || !password || !date}
+          onClick={handleSubmit}
+          variant="contained"
+          sx={{ width: "82%", marginTop: "2rem", marginBottom: "1rem" }}
+        >
+          Sign Up
+        </Button>
       </div>
     </div>
   );

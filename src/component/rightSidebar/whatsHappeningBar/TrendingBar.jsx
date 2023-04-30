@@ -4,9 +4,7 @@ import { CgMoreO } from "react-icons/cg";
 import PopoverIcon from "./PopOver";
 
 const Trends = () => {
-  const [trending, setTrendings] = useState
-
-  ([
+  const [trending, setTrendings] = useState([
     {
       id: 1,
       country: "Trending in World",
@@ -74,7 +72,10 @@ const Trends = () => {
                 {keyword.totalKeywords}
               </div>
             </div>
-            <div className={style.btn} onClick={(e) => handlePopoverOpen(e, keyword.id)}>
+            <div
+              className={style.btn}
+              onClick={(e) => handlePopoverOpen(e, keyword.id)}
+            >
               <CgMoreO size={24} />
             </div>
           </div>

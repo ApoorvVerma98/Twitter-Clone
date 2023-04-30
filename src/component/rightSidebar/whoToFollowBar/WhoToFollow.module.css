@@ -13,7 +13,6 @@
   max-height: 18rem;
   overflow-y: auto;
   margin-top: 1rem;
-
 }
 .container h1 {
   margin: 0.5rem;
@@ -24,7 +23,6 @@
   display: none;
 }
 
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -33,7 +31,6 @@
   background-color: #f7f9f9;
   padding: 0.5rem;
   border-radius: 1rem;
-
 }
 .wrapper:hover {
   background-color: #eff1f1;
@@ -52,18 +49,16 @@
   text-align: center;
   border: none;
   outline: none;
-  margin-left: auto; 
-  font-size: 1rem; 
+  margin-left: auto;
+  font-size: 1rem;
   padding: 0.5rem;
 }
-.img{
- 
+.img {
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-.img h3{
-
+.img h3 {
   margin-left: 0;
   font-size: 16px;
 }
@@ -72,12 +67,11 @@
   background: none;
   color: rgb(29, 155, 240);
   font-size: 1rem;
-    border: none;
+  border: none;
   outline: none;
 }
 
 @media screen and (max-width: 600px) {
-
   .container {
     font-size: 1.2rem;
     padding: 0.5rem;

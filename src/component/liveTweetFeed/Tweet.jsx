@@ -13,19 +13,16 @@ import { TweetSlice } from "../storeComponent/reducer";
 function Tweet(props) {
   const dispatch = useDispatch();
 
-
-
-
   const { tweet } = props;
 
   const handleLike = () => {
-      dispatch(TweetSlice.actions.addLike(tweet))
+    dispatch(TweetSlice.actions.addLike(tweet));
   };
 
   const handleRetweet = () => {
     dispatch(TweetSlice.actions.addretweet(tweet));
   };
- 
+
   const handleComment = () => {
     dispatch(TweetSlice.actions.addComment(tweet));
   };
@@ -81,7 +78,6 @@ function Tweet(props) {
           </span>
         </div>
       </div>
-   
     </div>
   );
 }

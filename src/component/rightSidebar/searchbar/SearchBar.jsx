@@ -15,7 +15,7 @@ const SearchBar = () => {
   const handleInputFocus = () => {
     setPlaceholder("Try searching for people, topics, or keywords");
   };
- 
+
   const handleInputBlur = () => {
     setPlaceholder("Search Twitter");
   };

@@ -3,7 +3,7 @@ import { Box, TextField, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { FcGoogle } from "react-icons/fc";
 import AppleIcon from "@mui/icons-material/Apple";
-import { Link,} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Joi from "joi";
 import styles from "./SignIn.module.css";
 import { FaTwitter } from "react-icons/fa";
@@ -97,8 +97,6 @@ function TwitterLogin() {
           >
             Sign in with Apple
           </Button>
-        
-          
         </div>
         <form onSubmit={handleSubmit}>
           <Box className={styles.inputContainer}>

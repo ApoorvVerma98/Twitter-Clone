@@ -5,22 +5,20 @@
   align-items: center;
   z-index: 999;
   background-color: white;
+}
 
-
-  }
-  
-  .searchInput {
+.searchInput {
   border: none;
   width: 100%;
   outline: none;
-  background: #EFF3F4;
+  background: #eff3f4;
   border-radius: 50px;
   color: white;
   padding: 0.93rem 2rem;
   font-size: 1rem;
-  }
-  
-  .searchButton {
+}
+
+.searchButton {
   position: absolute;
   top: 50%;
   left: 15rem;
@@ -28,53 +26,52 @@
   border: none;
   background: none;
   cursor: pointer;
- 
-  }
-  
-  .searchButton:focus {
+}
+
+.searchButton:focus {
   outline: none;
-  }
-  
-  .searchButton:hover {
+}
+
+.searchButton:hover {
   opacity: 0.8;
-  }
-  
-  svg {
+}
+
+svg {
   font-size: 1.1rem;
   color: silver;
+}
+
+@media (max-width: 767px) {
+  .searchBar {
+    padding: 0.5rem;
   }
 
-  @media (max-width: 767px) {
-    .searchBar {
-    padding: 0.5rem;
-    }
-    
-    .searchInput {
+  .searchInput {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    }
-    
-    .searchButton {
+  }
+
+  .searchButton {
     right: 0.3rem;
-    }
-    
-    svg {
+  }
+
+  svg {
     font-size: 0.9rem;
-    }
-    }
-    
-    /* For screens larger than 768px */
-    @media (min-width: 768px) {
-    .searchBar {
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .searchBar {
     padding: 1rem;
-    }
-     
-    .searchInput {
+  }
+
+  .searchInput {
     padding: 0.93rem 2rem;
     font-size: 1rem;
-    }
-    
-    .searchButton {
+  }
+
+  .searchButton {
     right: 0.5rem;
-    }
-    }
+  }
+}

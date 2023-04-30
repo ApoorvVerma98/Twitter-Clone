@@ -12,35 +12,35 @@ const userSlice = createSlice({
 });
 
 const TweetSlice = createSlice({
-  name: "Tweets", 
+  name: "Tweets",
   initialState: [],
-  reducers: { 
+  reducers: {
     AddAllTweet: (state, action) => {
       state.push(...action.payload);
     },
     addretweet: (state, action) => {
       const { id } = action.payload;
-      const data = state.find((item) => item.id == id);
+      const data = state.find((item) => item.id === id);
       data.reTweetsCount++;
     },
     addComment: (state, action) => {
       const { id } = action.payload;
-      const data = state.find((item) => item.id == id);
+      const data = state.find((item) => item.id === id);
       data.commentCount++;
     },
     addLike: (state, action) => {
       const { id } = action.payload;
-      const data = state.find((item) => item.id == id);
-      if (data.isLiked == true) {
+      const data = state.find((item) => item.id === id);
+      if (data.isLiked === true) {
         data.likeCount--;
       } else {
         data.likeCount++;
       }
       data.isLiked = !data.isLiked;
     },
-    addTweet:(state,action)=>{
-        state.unshift(action.payload)
-    }
+    addTweet: (state, action) => {
+      state.unshift(action.payload);
+    },
   },
 });
 

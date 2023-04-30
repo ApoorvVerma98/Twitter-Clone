@@ -5,14 +5,11 @@
 
   max-height: 20rem;
   overflow-y: auto;
- 
 }
 ::-webkit-scrollbar {
   display: none;
-
 }
 
- 
 .key {
   background: #f7f9f9;
   padding: 0.45rem;
@@ -49,7 +46,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0.5rem;
-  overflow-y:auto;
+  overflow-y: auto;
   max-height: 100vh;
 }
 

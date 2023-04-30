@@ -1,4 +1,3 @@
-
 import LeftSideBar from "../../component/leftsidebar/Leftsidebar";
 import RightSideBar from "../../component/rightSidebar/RightSideBar";
 import LiveTweet from "../../component/liveTweet/LiveTweet";
@@ -22,21 +21,19 @@ const Home = () => {
   return (
     <div className={style.homeContainer}>
       <div className={style.LeftSideBar}>
-          < LeftSideBar />
+        <LeftSideBar />
       </div>
       <div className={style.TweetContainer}>
         <LiveTweet />
       </div>
 
       <div>
- < RightSideBar /> 
-
+        <RightSideBar />
       </div>
-    </div> 
+    </div>
   );
 };
 
 export default Home;
-
 
 //jjjj

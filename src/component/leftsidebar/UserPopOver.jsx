@@ -21,16 +21,20 @@ const PopOver = () => {
   }
 
   return (
-    <PopupState variant="popover" popupId="demo-popup-popover" >
+    <PopupState variant="popover" popupId="demo-popup-popover">
       {(popupState) => (
         <div>
-          <button className={style.btn} {...bindTrigger(popupState)} style={{cursor:"pointer",padding:"0 10px"}}>
+          <button
+            className={style.btn}
+            {...bindTrigger(popupState)}
+            style={{ cursor: "pointer", padding: "0 10px" }}
+          >
             <img
               src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000"
               alt=""
               className={style.photo}
             />
-            {auth?.user?.name|| ""} <MoreHorizOutlinedIcon />
+            {auth?.user?.name || ""} <MoreHorizOutlinedIcon />
           </button>
           <Popover
             {...bindPopover(popupState)}
