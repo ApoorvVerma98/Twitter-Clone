@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./LeftBarMenu.module.css";
-import { FaTwitter } from "react-icons/fa";
 import { NotificationsOutlined } from "@mui/icons-material";
 import { BiHash } from "react-icons/bi";
 import { MdOutlineMail } from "react-icons/md";
