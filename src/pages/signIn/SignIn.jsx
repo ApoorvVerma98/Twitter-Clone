@@ -3,14 +3,18 @@ import { Box, TextField, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { FcGoogle } from "react-icons/fc";
 import AppleIcon from "@mui/icons-material/Apple";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Joi from "joi";
 import styles from "./SignIn.module.css";
 import { FaTwitter } from "react-icons/fa";
 import swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
- 
+import { useSetRecoilState } from "recoil";
+import { authAtom } from "../../component/recoil/atom";
+
+
 function TwitterLogin() {
+  const setAuth = useSetRecoilState(authAtom);
   const Navigate = useNavigate(); 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +44,7 @@ function TwitterLogin() {
     }
     const userdata = JSON.parse(localStorage.getItem("userdata")) || [];
     console.log(userdata);
-    const existingUser = userdata.find((user) => user.email === username);
+    const existingUser = userdata.find((user) => user.email === username && user.password== password);
 
     if (existingUser == undefined) {
       swal.fire({
@@ -51,8 +55,14 @@ function TwitterLogin() {
       return;
     }
 
-    localStorage.setItem("logedUser", JSON.stringify(data));
-
+    // localStorage.setItem("logedUser", JSON.stringify(data));
+    
+    setAuth({
+      isLoggedIn:true,
+      user:{
+        ...existingUser
+      }
+    })
     swal.fire({
       icon: "success",
       title: "😎😎😎😎 ",
@@ -68,16 +78,21 @@ function TwitterLogin() {
     <div className={styles.container}>
       <div className={styles.overlay}></div>
       <Box className={styles.box}>
-        <NavLink to="/" className={styles.cancelButton}>
-          <CloseIcon />
-        </NavLink>
+       <div className={styles.cancelButton}>
+        <Link to={'/signup'}>
+       <CloseIcon />
+
+        </Link>
+
+       </div>
+        
         <FaTwitter className={styles.logo} />
         <h1 className={styles.title}>Sign in to Twitter</h1>
         <div className={styles.socialButtonsContainer}>
           <Button className={styles.googleButton} startIcon={<FcGoogle />}>
             Sign in with Google
           </Button>
-          <Button className={styles.appleButton} startIcon={<AppleIcon />}>
+          <Button className={styles.appleButton} startIcon={<AppleIcon style={{color:"black"}} />}>
             Sign in with Apple
           </Button>
         </div>
@@ -121,7 +136,7 @@ function TwitterLogin() {
         </form>
         <div className={styles.signupContainer}>
           <p>
-            Don't have an account? <a href="./SignUp">Sign up</a>
+            Don't have an account? <Link to={'/signup'}>Sign up</Link>
           </p>
         </div>
       </Box>
@@ -129,4 +144,4 @@ function TwitterLogin() {
   );
 }
 
-export default TwitterLogin;
+export default TwitterLogin;

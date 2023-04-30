@@ -57,48 +57,48 @@ function LeftBarMenu() {
     <div className={styles.sidebar}>
       <div className={styles.sidebar__item}>
         <div className={styles.twitterLogoDiv}>
-        <BsTwitter className={styles.twitterLogo} />
+        <BsTwitter className={styles.twitterLogo}  />
         </div>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BiHomeCircle />
+          <BiHomeCircle style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Home</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BiHash />
+          <BiHash style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Explore</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <MdOutlineMail />
+          <MdOutlineMail style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Messages</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <NotificationsOutlined />
+          <NotificationsOutlined style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Notifications</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <BsBookmark />
+          <BsBookmark style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Bookmarks</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <IoPerson />
+          <IoPerson style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>Profile</span>
       </div>
       <div className={styles.sidebar__item}>
         <div className={styles.sidebar__icon}>
-          <CgMoreO />
+          <CgMoreO style={{color:"black"}} />
         </div>
         <span className={styles.sidebar__text}>More</span>
       </div>

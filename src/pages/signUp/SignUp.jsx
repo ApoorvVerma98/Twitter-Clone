@@ -73,7 +73,7 @@ function SignUp() {
             <CloseIcon
               className={styles.closebtn}
               onClick={() => {
-                navigate("/");
+                navigate("/signin");
               }}
             />
           </form>

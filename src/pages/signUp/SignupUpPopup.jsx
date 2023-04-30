@@ -32,13 +32,13 @@ function SignupUpPopup(props) {
     setName(value);
   };
 
-  console.log(
-    email.length === 0 ||
-      phone ||
-      emailError ||
-      passwordError ||
-      (phoneError && true)
-  );
+  // console.log(
+  //   email.length === 0 ||
+  //     phone ||
+  //     emailError ||
+  //     passwordError ||
+  //     (phoneError && true)
+  // );
 
   const handleChangePassword = (event) => {
     const { value } = event.target;
@@ -162,7 +162,7 @@ function SignupUpPopup(props) {
 
     setTimeout(() => {
       Navigate("/signin");
-    }, 1000);
+    }, 2000);
   };
 
   return (

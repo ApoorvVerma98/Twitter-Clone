@@ -35,10 +35,61 @@
     border-radius: 30px !important;
     width: 80px;
     height: 40px !important;
-    margin-top: 20px !important;
+ 
     margin-left: auto !important;
   }
 
+  .iconsDiv{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .iconsDiv div{
+
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+  }
+  .image{
+    font-size: 25px;
+    color: #1D9BF0;
+  }
+
+  .gifi{
+    font-size: 25px;
+    color: #1D9BF0;
+
+
+  }
+
+  .poll{
+    font-size: 25px;
+    color: #1D9BF0;
+
+  
+  }
+  .smily{
+    font-size: 25px;
+    color: #1D9BF0;
+
+
+  }
+.timeTable{
+  font-size: 25px;
+  color: #1D9BF0;
+
+
+}
+.location{
+  font-size: 25px;
+  color: #1D9BF0;
+  
+
+
+}
   @media screen and (max-width: 768px) {
       
      .tweetBox__tweetButton{

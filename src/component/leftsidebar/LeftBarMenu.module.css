@@ -16,7 +16,6 @@
 .twitterLogo{
   color: rgb(29, 155, 240) !important;
   
-
 }
 
 
@@ -32,6 +31,7 @@
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   border: #eff1f1;
+  user-select: none;
 }
 
 .sidebar__item:hover {
