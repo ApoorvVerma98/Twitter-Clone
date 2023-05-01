@@ -31,6 +31,10 @@ function LiveTweet() {
         />
         <BsTwitter className={style.twitterLogo} />
         <h2>Home</h2>
+        <div className={style.foru}>
+        <span>Foryou </span>
+        <span>Following</span>
+        </div>
       </div>
 
       <PostTweet />

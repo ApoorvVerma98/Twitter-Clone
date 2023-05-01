@@ -70,9 +70,9 @@ function TwitterLogin() {
       text: "Logged In!",
       // footer: '<a href="">Why do I have this issue?</a>'
     });
-    setTimeout(() => {
+    // setTimeout(() => {
       Navigate("/");
-    }, 2000);
+    // }, 2000);
   }
 
   return (

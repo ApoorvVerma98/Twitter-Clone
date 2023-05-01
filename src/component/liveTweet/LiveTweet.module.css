@@ -3,6 +3,21 @@
   max-height: 100vh;
   width: 94%;
   margin-right: 0;
+  border-color: #EFF1F1 !important;
+}
+
+.foru  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: #00acee;
+}
+
+.foru :hover{
+  cursor: pointer;
+  color: #00acee;
+  box-shadow: black;
 }
 
 .feed::-webkit-scrollbar {

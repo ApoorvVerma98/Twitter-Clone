@@ -1,10 +1,13 @@
 .post {
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid var(--twitter-background);
+  /* border-bottom: 1px solid var(--twitter-background); */
   padding-bottom: 10px;
   padding: 20px;
   width: 100%;
+  border-right: 1px solid #EFF1F1 !important ;
+  border-left: 1px solid #EFF1F1 !important ;
+
 }
 
 .post:hover {

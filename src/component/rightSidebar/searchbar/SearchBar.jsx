@@ -8,9 +8,9 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform search action with the query here
-    console.log(query);
+  
   };
+ 
 
   const handleInputFocus = () => {
     setPlaceholder("Try searching for people, topics, or keywords");
@@ -19,6 +19,7 @@ const SearchBar = () => {
   const handleInputBlur = () => {
     setPlaceholder("Search Twitter");
   };
+  console.log(query);
 
   return (
     <form className={styles.searchBar} onSubmit={handleSubmit}>
