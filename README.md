@@ -1,3 +1,9 @@
+Deployed link:- https://twitter-clone-project.onrender.com/
+*********
+![image](https://github.com/ApoorvVerma98/Twitter-Clone/assets/126326376/61ede517-3b9c-425f-8bb2-576601596c9a)
+
+*********
+
 Welcome to the Twitter Clone created by Apoorv Verma and Chand Babu!
 
 This project aims to replicate the basic functionality of the popular social media platform, Twitter. Users can create an account, follow other users, post tweets, and interact with other users' tweets by liking and commenting on them.
